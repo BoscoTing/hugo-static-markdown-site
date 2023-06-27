@@ -1,1 +1,0 @@
-# boscoting.github.io
