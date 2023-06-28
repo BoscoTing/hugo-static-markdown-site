@@ -4,20 +4,20 @@
     <h1>Assignment-3</h1>
     <p>
       def find_max(numbers):<br>
-        &npsp max_number = 0<br>
+        &nbsp max_number = 0<br>
         &nbsp for i in range(len(numbers)):<br>
         &nbsp &nbsp    if numbers[i] > max_number:<br>
-        &nbsp &nbsp         max_number = numbers[i]<br>
-        &nbsp &nbsp return max_number<br>
+        &nbsp &nbsp &nbsp          max_number = numbers[i]<br>
+        &nbsp return max_number<br>
         <br>
       def find_position(numbers, target):<br>
-        &nbsp &nbsp list_position = []<br>
-        &nbsp &nbsp for i in range(len(numbers)):<br>
+        &nbsp list_position = []<br>
+        &nbsp for i in range(len(numbers)):<br>
             &nbsp &nbsp if numbers[i] == target:<br>
-                &nbsp &nbsp list_position.append(i)<br>
+                &nbsp &nbsp &nbsp list_position.append(i)<br>
         &nbsp &nbsp if not list_position:<br>
-            &nbsp &nbsp list_position.append(-1)<br>
-        &nbsp &nbsp return list_position[0]
+            &nbsp &nbsp &nbsp list_position.append(-1)<br>
+        &nbsp return list_position[0]
     </p>
   <body>
 </html>
