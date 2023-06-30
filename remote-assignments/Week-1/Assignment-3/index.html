@@ -1,23 +1,36 @@
 <DOCTYPE html>
 <html>
+  <head></head>
+  <link rel="stylesheet" href="style.css">
   <body>
     <h1>Assignment-3</h1>
     <p>
-      def find_max(numbers):<br>
-        &nbsp max_number = 0<br>
-        &nbsp for i in range(len(numbers)):<br>
-        &nbsp &nbsp    if numbers[i] > max_number:<br>
-        &nbsp &nbsp &nbsp          max_number = numbers[i]<br>
-        &nbsp return max_number<br>
-        <br>
-      def find_position(numbers, target):<br>
-        &nbsp list_position = []<br>
-        &nbsp for i in range(len(numbers)):<br>
-            &nbsp &nbsp if numbers[i] == target:<br>
-                &nbsp &nbsp &nbsp list_position.append(i)<br>
-        &nbsp &nbsp if not list_position:<br>
-            &nbsp &nbsp &nbsp list_position.append(-1)<br>
-        &nbsp return list_position[0]
+        <div style="overflow-x: scroll "> 
+          <table border="0" width="100%" padding="4"> 
+          <tbody><tr><td><pre style=" hidden;font-family:monaco;"> 
+def find_max(numbers):
+  max_number = 0
+  for i in numbers:
+      if i > max_number:
+          max_number = i
+  return max_number
+
+def find_position(numbers, 
+                  target):
+    success, fail, t = 0, 0, 0
+    for num in numbers:
+        if num == target:
+            success += 1 
+            break
+        if num != target:
+            fail += 1
+        t += 1
+    if t == fail:
+        result = -1
+    if success >= 1:
+        result = t
+    return result 
+          </pre></table></div> 
     </p>
   <body>
 </html>
