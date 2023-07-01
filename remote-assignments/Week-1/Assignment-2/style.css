@@ -1,28 +1,32 @@
-/* body{
-    margin: 0px;
-} */
+*{
+  font-family: "Times New Roman"  ;
+}
+
+body{
+    margin: 0px 0px 20px 0px;
+}
 
 nav {
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
-    background-color: gainsboro;
+    background-color: rgb(238, 238, 238);
     color: black;
-    padding: 5px 5px; 
-    border:0px 0px 0px 0px solid #ffa949;
+    padding: 0px 0px 0px 30px;  
+    border-top: 1.5px solid rgb(191,191,191);
     /* text-align:left;  */
 }
 
 nav li {
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 50px;
     /* flex-grow: 1; */
 }
 
 h1 {
-    background-color: lightcyan;
+    background-color: rgb(204, 221, 238);
     color: black;
-    padding: 20px ;
+    padding: 80px ;
     border: 0px ;
     margin: 0px auto 0px;
     /* width: 200p; */
@@ -42,31 +46,34 @@ h2 {
     text-align: center;  
 }
 
-p.action{
-    background-color: lightblue;
-    padding: 5px 0px ;
-    border: 1px ;
-    margin: 0px auto 0px;
-    width: 200px;
-    font-size: .3rem;
-    text-align: center;
-}
-
-
 .content_box {
+    flex-direction: row;
     list-style: none;
     display: grid;
-    grid-template-columns: auto; /* set column sizes here */
-    grid-template-rows: auto auto; /* we want two rows */
-
+    padding: 0% 10%;
+    grid-template-columns: auto auto; /* set column sizes here */
+    grid-template-rows: auto ; /* we want two rows */
     grid-gap: 20px; /* how far between cells? */
-    grid-auto-flow: column; /* fill in by column, not row */
+    grid-auto-flow:row; /* fill in by column, not row */
     /* temporary property for visualization */
-    height: 200px;
+    height: 300px;
+    /* flex-direction:; */
     /* vertical-align: auto; */
 }
 
 .box {
-    border: 1px solid #000;
+    border: 0.5px solid rgb(184, 194, 204);
+    padding: 10px 0 0 0;
+    background-color: rgb(136, 153, 170);;
+    text-align: center;
+}
+
+p.action{
+    background-color: rgb(204, 221, 238);
+    padding: 10px 10px ;
+    border: 0px ;
+    margin: 25px auto 0px;
+    width: 100px;
+    /* font-size: .3rem; */
     text-align: center;
 }
