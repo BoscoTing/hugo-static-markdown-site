@@ -1,1 +1,28 @@
-
+<DOCTYPE html>
+    <html>
+      <head></head>
+      <link rel="stylesheet" href="style.css">
+      <body>
+        <h1>Assignment-3</h1>
+        <p>
+            <div style="overflow-x: scroll "> 
+              <table border="0" width="100%" padding="4"> 
+              <tbody><tr><td><pre style=" hidden;font-family:monaco;"> 
+def binary_search_position(numbers, 
+                           target):
+    left = 0
+    right = len(numbers)
+    while left <= right:
+        mid = int((left+right) / 2)
+        if numbers[mid] < target: 
+            left += 1
+        elif numbers[mid] > target:
+            right -= 1
+        else:
+            return mid
+        return -1
+              </pre></table></div> 
+        </p>
+      <body>
+    </html>
+    
