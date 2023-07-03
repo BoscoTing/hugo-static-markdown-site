@@ -7,6 +7,19 @@ def find_max(numbers):
 
 def find_position(numbers, 
                   target):
+    t = 0
+    result = -1
+    for num in numbers:
+        if num == target:
+            result = t
+            break
+        t += 1
+    return result
+
+
+""" 舊版
+    def find_position(numbers, 
+                  target):
     success, fail, t = 0, 0, 0
     for num in numbers:
         if num == target:
@@ -20,3 +33,4 @@ def find_position(numbers,
     if success >= 1:
         result = t
     return result 
+"""
