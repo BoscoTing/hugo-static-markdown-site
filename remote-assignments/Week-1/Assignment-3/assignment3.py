@@ -1,9 +1,9 @@
 def find_max(numbers):
-  max_number = 0
-  for i in numbers:
-      if i > max_number:
-          max_number = i
-  return max_number
+    max_number = 0
+    for i in numbers:
+        if i > max_number:
+            max_number = i
+    return max_number
 
 def find_position(
         numbers, target):
