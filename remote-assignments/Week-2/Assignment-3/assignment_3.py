@@ -1,10 +1,10 @@
 def avg(data):
     total_price = 0
-    number_of_product = 0
-    for products in data['products']:
-        total_price += products['price']
-        number_of_product += 1
-        average_price = total_price / number_of_product
+    number_of_products = 0
+    for product in data['products']:
+        total_price += product['price']
+        number_of_products += 1
+        average_price = total_price / number_of_products
     return average_price
 
 print(
