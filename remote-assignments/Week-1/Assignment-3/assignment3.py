@@ -5,8 +5,8 @@ def find_max(numbers):
           max_number = i
   return max_number
 
-def find_position(numbers, 
-                  target):
+def find_position(
+        numbers, target):
     t = 0
     result = -1
     for num in numbers:
