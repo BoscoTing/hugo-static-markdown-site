@@ -16,9 +16,9 @@ def find_position(
         t += 1
     return result
 
-
-""" 舊版
-    def find_position(numbers, 
+# 舊版
+""" 
+def find_position(numbers, 
                   target):
     success, fail, t = 0, 0, 0
     for num in numbers:
