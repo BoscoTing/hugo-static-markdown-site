@@ -1,6 +1,8 @@
 def find_max(numbers):
-    max_number = 0
+    max_number = None
     for i in numbers:
+        while max_number == None:
+            max_number = i
         if i > max_number:
             max_number = i
     return max_number
