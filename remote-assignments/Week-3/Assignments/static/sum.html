@@ -1,0 +1,45 @@
+<!--
+2. Serve a static HTML file named sum.html. It means you can enter
+http://localhost:3000/sum.html in a browser’s address bar to get this HTML page.
+3. Write some JavaScript code in sum.html to make an HTTP request by AJAX to
+http://localhost:3000/data?number=10, and get the result 55 from the server.
+4. Write a simple user interface to let users enter a number and get the result from the
+server. (For a simple example, a text input and a button.)
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>∆ Summation ∆</title> 
+    <!-- <link rel="stylesheet" href="/static/styles.css"> -->
+  </head> 
+<link rel="stylesheet" href="/static/styles.css">
+  <body> 
+    <input class="text_bar" type="text" placeholder="Enter a positive integer">
+    <button class="send_botton" type="button">Send</button>
+    <p id="result"></p>
+
+    <script src="/static/scripts.js"></script>
+  </body>
+  <footer>
+
+  </footer>
+</html>
+
+
+<!-- 
+{% extends "layout.html" %}
+{% block title %} 
+Bosco | {{ super() }} 
+{% endblock %}
+<link rel="stylesheet" href="/static/styles.css">
+
+{% block content %}
+  <h3>Enter a positive integer:</h3>
+  <p id='send_botton'>Send</p>
+{% endblock %}
+
+{% block script%}
+<script src="/static/scripts.js"></script>
+{% endblock t%} -->
+
+
