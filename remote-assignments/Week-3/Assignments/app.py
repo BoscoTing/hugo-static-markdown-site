@@ -4,7 +4,6 @@ from flask import (Flask,
                    redirect, 
                    url_for, 
                    request, 
-                   send_from_directory,
                    make_response)
 
 app = Flask(__name__)
@@ -13,7 +12,6 @@ app = Flask(__name__)
 def index():
 	return render_template('index.html')
 
-# 計算級數
 @app.route('/data', 
            methods = ['GET'])
 def series():
@@ -36,10 +34,10 @@ def sum_page():
 
 def get_saved_data():
     try:
-        data = json.loads(request.cookies.get('user'))
+        data = json.loads(request.cookies.get('user_cookie'))
     except TypeError: 
         data = {}
-    return data # as a dictionary
+    return data 
 
 @app.route('/myName')
 def my_name():
@@ -47,27 +45,22 @@ def my_name():
     return render_template('myname.html', saves=data)
 
 @app.route('/trackName', 
-           methods = ["POST"])
+           methods = ["POST", "GET"])
 def track_name():
-    if request.method == "POST":
+    if request.method=="POST":
         response = make_response(redirect(url_for('my_name'))) 
         data = get_saved_data()
         data.update(dict(request.form.items())) 
-        response.set_cookie('user', 
+        response.set_cookie('user_cookie', 
                             json.dumps(data))
-        return response
-    
-@app.route('/trackName', methods=['GET'])
-def track_name_get():
-    name = request.args.get('name')
-    if name:
-        data = json.loads(request.cookies.get('user'))
-        data['user'] = name
+    elif request.method=="GET":
+        name = request.args.get('name')
         response = make_response(redirect(url_for('my_name')))
-        response.set_cookie('user', 
+        data = get_saved_data()
+        data['user'] = name
+        response.set_cookie('user_cookie', 
                             json.dumps(data))
     return response
-
-
+    
 if __name__ == "__main__":
-    app.run(port=8000, debug=True)
+    app.run(port=3000, debug=True)
