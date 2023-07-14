@@ -47,19 +47,15 @@ def my_name():
 @app.route('/trackName', 
            methods = ["POST", "GET"])
 def track_name():
+    response = make_response(redirect(url_for('my_name'))) 
+    data = get_saved_data()
     if request.method=="POST":
-        response = make_response(redirect(url_for('my_name'))) 
-        data = get_saved_data()
         data.update(dict(request.form.items())) 
-        response.set_cookie('user_cookie', 
-                            json.dumps(data))
     elif request.method=="GET":
         name = request.args.get('name')
-        response = make_response(redirect(url_for('my_name')))
-        data = get_saved_data()
         data['user'] = name
-        response.set_cookie('user_cookie', 
-                            json.dumps(data))
+    response.set_cookie('user_cookie', 
+                        json.dumps(data))
     return response
     
 if __name__ == "__main__":
