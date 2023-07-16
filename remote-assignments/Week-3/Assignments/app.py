@@ -37,6 +37,7 @@ def get_saved_data():
         data = json.loads(request.cookies.get('user_cookie'))
     except TypeError: 
         data = {}
+    print(data)
     return data 
 
 @app.route('/myName')
@@ -53,9 +54,9 @@ def track_name():
         data.update(dict(request.form.items())) 
     elif request.method=="GET":
         name = request.args.get('name')
-        data['user'] = name
-    response.set_cookie('user_cookie', 
-                        json.dumps(data))
+        # data['user'] = name
+        data.update(dict({'user':name})) 
+    response.set_cookie('user_cookie', json.dumps(data))
     return response
     
 if __name__ == "__main__":
