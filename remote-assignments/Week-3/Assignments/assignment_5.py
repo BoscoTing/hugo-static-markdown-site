@@ -17,6 +17,6 @@ def twoSum(nums, target):
         i += 1 
     return "Can't find the answer." 
 
-# time-comlexity: 
+# time-complexity: 
 # O(nlog n) + O(n) + O(1)
 # Big O = nlog n
