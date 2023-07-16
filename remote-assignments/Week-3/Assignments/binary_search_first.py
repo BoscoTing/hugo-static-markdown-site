@@ -1,26 +1,20 @@
-def twoSum(nums, target):
-    i = 0 
-    right = len(nums) 
-    for num in nums: 
-        diff = target - num 
-        left = i 
-        while left < right: 
-            mid = (left+right) // 2 
-            if nums[mid] < diff: 
-                left += 1
-            elif nums[mid] > diff: 
-                right -= 1 
-            elif nums[mid-1] == diff:
-                right -= 1
-            else: 
-                return [i, mid]
-        i += 1 
-    return "Can't find the answer." 
-
-# time-complexity: 
-# O(nlog n) + O(n) + O(1)
-# Big O = nlog n
-
+def binary_search_first(numbers, 
+                        target):
+    left = 0
+    right = len(numbers)
+    while left < right:
+        # print(left, right)
+        mid = (left+right) // 2
+        if numbers[mid] < target: 
+            left += 1
+        elif numbers[mid] > target: 
+            right -= 1
+        elif numbers[mid-1] == target:
+            right -= 1
+        else: # numbers[mid] == target
+            return mid
+    # print(left, right)
+    return mid+1 # left==right時
 
 
 
