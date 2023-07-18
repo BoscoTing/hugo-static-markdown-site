@@ -21,7 +21,7 @@ def series():
     elif (( number.isdigit() == False ) or
           ( int(float(number)) < 0 ) or 
           ( (float(number)).is_integer() == False )):
-        return "<p>Number should be a positive integer!</p>"
+        return "<p>Wrong Parameter</p>"
     else:
         sum = 0
         for i in range(1, int(number)+1):
