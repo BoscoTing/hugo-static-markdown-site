@@ -19,8 +19,8 @@ def series():
     if number == "" or number == None:
         return '<p>Lack of Parameter</p>'
     elif (( number.isdigit() == False ) or
-          ( int(float(number)) < 0 ) or 
-          ( (float(number)).is_integer() == False )):
+          ( (float(number)).is_integer() == False ) or
+          ( int(float(number)) < 0 )):
         return "<p>Wrong Parameter</p>"
     else:
         sum = 0

@@ -7,7 +7,7 @@ send_botton.addEventListener('click', () => {
         if (this.readyState == 4 && this.status == 200) { 
         //    let result = xhttp.responseText
             document.getElementById("result").innerHTML = this.responseText;
-            if (this.responseText === "<p>Number should be a positive integer!</p>") {
+            if (this.responseText === "<p>Wrong Parameter</p>") {
                 alert("Please try again.")
             }
         }
