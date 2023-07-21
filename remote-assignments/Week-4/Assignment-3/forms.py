@@ -1,8 +1,6 @@
 import pymysql
-import re
-
-db_password = "BoscoTing122333"
-
+from decouple import config
+db_password = config('dbpassword')
 # 信箱是否符合格式
 def validate_email(user_email):
     if not re.match(r"[^@]+@[^@]+\.[^@]+", user_email):
