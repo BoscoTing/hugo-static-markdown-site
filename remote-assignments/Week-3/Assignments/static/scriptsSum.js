@@ -11,7 +11,7 @@ send_botton.addEventListener('click', () => {
                 alert("Please try again.")
             }
         }
-    }
+    };
     xhttp.open("GET", `data?number=${ number }`, true);
     xhttp.send();
 })
