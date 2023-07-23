@@ -57,7 +57,7 @@ INSERT INTO article(author, title, content) VALUES
 
 -- 1. Write an SQL statement to select all articles with their author’s email. 
 SELECT content FROM user u INNER JOIN (SELECT * FROM article) AS ar 
-ON u.id = ar.user_id;
+ON u.email = ar.author;
 
 -- 2. Write another SQL statement to select articles from 7th to 12th sorted by id.
 SELECT content, user_id FROM article
