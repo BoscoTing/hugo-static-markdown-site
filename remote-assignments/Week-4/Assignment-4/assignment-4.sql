@@ -60,6 +60,6 @@ SELECT content FROM user u INNER JOIN (SELECT * FROM article) AS ar
 ON u.email = ar.author;
 
 -- 2. Write another SQL statement to select articles from 7th to 12th sorted by id.
-SELECT content, user_id FROM article
+SELECT content FROM article
 ORDER BY user_id ASC
 LIMIT 6 OFFSET 6;
