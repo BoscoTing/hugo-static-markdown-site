@@ -12,7 +12,6 @@ def homePage():
 def memberPage():
     return render_template('members.html')
 
-
 @app.route('/signup_info', 
            methods=["GET"])
 def signUpInfo():

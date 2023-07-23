@@ -2,6 +2,7 @@ import pymysql
 from decouple import config
 import re
 db_password = config('dbpassword')
+
 # 信箱是否符合格式
 def validate_email(user_email):
     if not re.match(r"[^@]+@[^@]+\.[^@]+", user_email):

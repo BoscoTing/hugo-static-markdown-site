@@ -41,17 +41,25 @@ INSERT INTO article(author, title, content) VALUES
 ("123@test5.com","Airborne","Has Airborne"),
 ("123@test5.com","Cooldown","and the cooldown is only 1 second too");
 
+-- 07/23 Add user_id column in article table.
+-- ALTER TABLE article 
+-- ADD COLUMN user_id INTEGER NOT NULL;
+
+-- 07/23 Set user_id in article table as foreign key references to id in user table. 
+-- SET FOREIGN_KEY_CHECKS=0;
+-- ALTER TABLE article
+-- ADD FOREIGN KEY (user_id) REFERENCES user(id);
+-- SET FOREIGN_KEY_CHECKS=1;
+
+-- 07/23 Update user_id to match the values of id in user table. 
+-- UPDATE article ar, user u SET ar.user_id = u.id
+-- WHERE ar.author = u.email;
+
 -- 1. Write an SQL statement to select all articles with their author’s email. 
-SELECT content FROM user INNER JOIN (SELECT * FROM article) AS ar 
-ON email = ar.author;
+SELECT content FROM user u INNER JOIN (SELECT * FROM article) AS ar 
+ON u.id = ar.user_id;
 
 -- 2. Write another SQL statement to select articles from 7th to 12th sorted by id.
-SELECT content, id FROM article INNER JOIN (SELECT * FROM user) u 
-ON u.email = author 
-ORDER BY id ASC
-LIMIT 5 OFFSET 6;
-
--- SELECT * FROM article ar
--- INNER JOIN user u on ar.author = u.email
--- ORDER BY id ASC
--- LIMIT 5 OFFSET 6;
+SELECT content, user_id FROM article
+ORDER BY user_id ASC
+LIMIT 6 OFFSET 6;
