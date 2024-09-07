@@ -36,7 +36,15 @@ hugo new posts/hello.md
 
 ### Public to GithubPage
 
-Run ```hugo``` command to generate or re-generate the /public folder
+Run these commands to generate or update the /public folder:
+
+```sh
+hugo
+```
+
+```sh
+hugo server -D --renderStaticToDisk --baseURL=your-guthub-pages-url --appendPort=false``` 
+```
 
 The actual content to host a static site will be in ```/public``` folder, so you need to push the content inside it on your [**GitHub Pages**](https://pages.github.com/) repo.
 
