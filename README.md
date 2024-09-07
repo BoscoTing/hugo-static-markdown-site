@@ -31,12 +31,12 @@ theme = '<your-theme-name>'
 This command will generate a ```.md``` file in the /content folder
 
 ```sh
-hugo new post/hello.md
+hugo new posts/hello.md
 ```
 
 ### Public to GithubPage
 
-Run ```hugo``` command to generate a /public folder
+Run ```hugo``` command to generate or re-generate the /public folder
 
 The actual content to host a static site will be in ```/public``` folder, so you need to push the content inside it on your [**GitHub Pages**](https://pages.github.com/) repo.
 
