@@ -1,0 +1,4 @@
+baseURL = 'https://boscoting.github.io/'
+languageCode = 'zh-tw'
+title = 'My New Hugo Site'
+theme = 'hello-friend-ng'
