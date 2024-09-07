@@ -1,25 +1,52 @@
 ## Usage
 
-```brew install hugo```
-
-```git init```
-
 ### Create a new site
 
-```hugo new site mysite```
+```sh
+brew install hugo
+```
 
-```cd ./mysite```
+```sh
+hugo new site mysite
+```
+
+```sh
+cd ./mysite
+```
 
 Choose a theme on [hugo themes](https://themes.gohugo.io/) and run this command:
 
-```hugo new theme <your-theme-name>```
+```sh
+hugo new theme <your-theme-name>
+```
 
-Configure your theme in hugo.toml
+Configure your theme in ```hugo.toml```
 
-```theme = '<your-theme-name>'```
+```sh
+theme = '<your-theme-name>'
+```
 
 ### Create a Post
 
-This command will generate a .md file in the /content folder
+This command will generate a ```.md``` file in the /content folder
 
-```hugo new post/hello.md```
+```sh
+hugo new post/hello.md
+```
+
+### Public to GithubPage
+
+Run ```hugo``` command to generate a /public folder
+
+The actual content to host a static site will be in ```/public``` folder.
+So you need to push the content inside it on your [**GitHub Pages**](https://pages.github.com/) repo.
+
+```sh
+cd /public
+git init
+git remote add your-githubpage-repo-url
+git add .
+git push origin main
+```
+
+check your page on https://your-github-name.github.io
