@@ -38,8 +38,7 @@ hugo new post/hello.md
 
 Run ```hugo``` command to generate a /public folder
 
-The actual content to host a static site will be in ```/public``` folder.
-So you need to push the content inside it on your [**GitHub Pages**](https://pages.github.com/) repo.
+The actual content to host a static site will be in ```/public``` folder, so you need to push the content inside it on your [**GitHub Pages**](https://pages.github.com/) repo.
 
 ```sh
 cd /public
@@ -49,4 +48,4 @@ git add .
 git push origin main
 ```
 
-check your page on https://your-github-name.github.io
+Check your page on https://your-github-name.github.io
